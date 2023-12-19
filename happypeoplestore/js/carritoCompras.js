@@ -157,7 +157,6 @@ $(document).ready(function(){
                     <div class="media-body">
                         <h3 class="dropdown-item-title">
                             ${element['nombre']}
-                            <span class="float-right text-sm text-primary"><i class="fas fa-eye"></i></span>
                         </h3>
                         <p class="text-sm">Cantidad: ${element['cantidad']}</p>
                     </div>
@@ -173,13 +172,13 @@ $(document).ready(function(){
         $("#listaCarrito").append(
             `
             <div class="dropdown-divider"></div>
-            <a href="index.php?modulo=carrito" class="dropdown-item dropdown-footer text-primary">
+            <a href="index.php?modulo=carrito" class="dropdown-item dropdown-footer bg-success text-light">
                 Ver Carrito
                 <i class="fa fa-cart-plus"></i>
             </a>
             <!-- linea dividora -->
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer text-danger" id="borrarCarrito">
+            <a href="#" class="dropdown-item dropdown-footer bg-danger text-white" id="borrarCarrito">
                 Borrar carrito
                 <i class="fa fa-trash"></i>
             </a>

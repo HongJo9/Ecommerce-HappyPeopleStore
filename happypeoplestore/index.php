@@ -135,11 +135,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!-- /.col -->
                         <div class="col-5">
                             <button type="submit" class="btn btn-primary btn-block" name="login">Iniciar sesión</button>
                         </div>
-                        <!-- /.col -->
+                        <div class="col-7">
+                            <a href="../index.php" class="btn btn-primary btn-success"><i class="fa fa-cart-plus" aria-hidden="true"></i> Regresar a la tienda</a>
+                        </div>
                     </div>
                 </form>
             </div>

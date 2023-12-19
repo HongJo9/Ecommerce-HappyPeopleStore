@@ -69,11 +69,11 @@
         }
         .header{
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url("happypeoplestore/dist/img/9.jpg");
-            background-position: center bottom;
+            url("happypeoplestore/dist/img/FACHADA.jpg");
+            background-position: center; /* Ajustar posición a la parte superior */
             background-repeat: no-repeat;
-            background-size: 190%;
-            min-height: 70vh;
+            background-size: cover; /* Ajustar tamaño para cubrir completamente el contenedor */
+            min-height: 60vh;
             display: flex;
             align-items: center;
             animation: zoomInOut 10s infinite alternate; /* Aplicar la animación */

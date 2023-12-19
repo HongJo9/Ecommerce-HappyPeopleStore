@@ -29,7 +29,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Usuarios</h1>
+            <h1>USUARIOS</h1>
           </div>
         </div>
       </div><!-- /.contenedor fluido -->
@@ -48,13 +48,14 @@
             padding: 20px;">
               <!-- /.card-header -->
               <div class="card-body" >
-              <a href="panel.php?modulo=crearUsuario" class="btn btn-primary" style="margin: 0 0 10px;">Crear Usuario</a>
+                <a href="panel.php?modulo=crearUsuario" class="btn btn-primary" style="margin: 0 0 10px;">Crear Usuario</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                     <tr>
                         <th>Nombre</th>
                         <th>Email</th>
-                        <th>Acciones</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
                     </tr>
                   </thead>
 
@@ -75,8 +76,10 @@
                             <td><?php echo $row['nombre'] ?></td>
                             <td><?php echo $row['email'] ?></td>
                             <td> 
-                                <a href="panel.php?modulo=editarUsuario&id=<?php echo $row['id'] ?>" style="margin-right: 5px;"> <i class="fas fa-edit"></i> </a> <!-- Editar usuario -->
-                                <a href="panel.php?modulo=usuarios&idBorrar=<?php echo $row['id'] ?>" class="text-danger borrar"> <i class="fas fa-trash"></i> </a> <!-- Borrar usuario -->
+                                <a href="panel.php?modulo=editarUsuario&id=<?php echo $row['id'] ?>"> <i class="icono fas fa-edit"></i> </a> <!-- Editar usuario -->
+                            </td>
+                            <td>
+                              <a href="panel.php?modulo=usuarios&idBorrar=<?php echo $row['id'] ?>" class="text-danger borrar"> <i class="icono fas fa-trash"></i> </a> <!-- Borrar usuario -->
                             </td>
                         </tr>
                         <?php
@@ -97,3 +100,12 @@
     </section>
     <!-- /.content -->
   </div>
+
+  <style>
+    .icono {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Tamaño del icono */
+    }
+  </style>

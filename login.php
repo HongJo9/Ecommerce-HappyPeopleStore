@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My ecommerce</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="happypeoplestore/dist/img/icono.jpg" sizes="16x16">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="happypeoplestore/plugins/fontawesome-free/css/all.min.css">

@@ -42,7 +42,8 @@
                                             <div class="d-flex align-items-center justify-content-center">
                                                 <h1 class="card-title font-weight-bold display-7"><?php echo $row['nombre']; ?></h1>
                                             </div>
-                                            <p class="card-text"><strong>Precio: </strong> <?php echo $row['precio'] ?> nuevos soles</p>
+                                            <hr>
+                                            <p class="card-text"><strong>Precio: </strong> <?php echo "S/.".$row['precio'] ?></p>
                                             <p class="card-text"><strong>Cantidad actual: </strong> <?php echo $row['stock']?> unidades</p>
                                             <a href="index.php?modulo=detalleProducto&id=<?php echo $row['id'] ?>" class="btn btn-primary d-flex align-items-center justify-content-center">Ver mas</a>
                                         </div>

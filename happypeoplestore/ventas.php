@@ -31,8 +31,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-10">
-            <h1>Ventas</h1> <br>
-            <p>Se mostrara todo el historial de las ventas aprobadas</p>
+            <h1>VENTAS</h1> <br>
           </div>
         </div>
       </div><!-- /.contenedor fluido -->

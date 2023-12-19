@@ -39,7 +39,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Detalles de Pre-Ventas</h1>
+                        <h1>Detalle de Ventas</h1>
                     </div>
                 </div>
             </div><!-- /.contenedor fluido -->
@@ -60,6 +60,7 @@
                                                 <div class="row">
                                                     <div class="col-4"></div>
                                                     <div class="col-8">
+                                                        <a href="panel.php?modulo=ventas" class="btn btn-warning" style="margin: 0 0 10px;">Regresar a Ventas</a>
                                                         <!-- Recibo en un cuadro -->
                                                         <div class="recibo">
                                                             <div class="row">

@@ -136,6 +136,14 @@
                 </a>
               </li>
 
+              <!-- Modulo de usuarios -->
+              <li class="nav-item">
+                <a href="panel.php?modulo=clientes" class="nav-link <?php echo ($modulo=="clientes" || $modulo=="crearClientes" || $modulo=="editarClientes")?" active ":" "; ?>">
+                  <i class="fa fa-users nav-icon" aria-hidden="true"></i>
+                  <p>Clientes</p>
+                </a>
+              </li>
+
               <!-- Modulo de Productos importados-->
               <li class="nav-item">
                 <a href="panel.php?modulo=productos" class="nav-link <?php echo ($modulo=="productos" || $modulo=="agregarProductos" || $modulo=="editarProductos")?" active ":" "; ?>">
@@ -147,7 +155,7 @@
               <!-- Modulo de pre-Ventas -->
               <li class="nav-item">
                 <a href="panel.php?modulo=pre_ventas" class="nav-link <?php echo ($modulo=="pre_ventas" || $modulo=="Recibo_Preventa")?" active ":" "; ?>">
-                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                <i class="fa fa-shopping-basket nav-icon" aria-hidden="true"></i>
                   <p>PreVentas</p>
                 </a>
               </li>
@@ -177,12 +185,19 @@
     </div>
     <?php
   }
+
     if($modulo=="estadisticas" || $modulo==""){
       include_once "estadisticas.php";
     }
+
     if($modulo=="usuarios"){
       include_once "usuarios.php";
     }
+
+    if($modulo=="clientes"){
+      include_once "clientes.php";
+    }
+
     if($modulo=="productos"){
       include_once "productos_PHP/productos.php";
     }
@@ -198,8 +213,15 @@
     if($modulo=="crearUsuario"){
       include_once "crearUsuario.php";
     }
+
+    if($modulo=="crearClientes"){
+      include_once "crearClientes.php";
+    }
     if($modulo=="editarUsuario"){
       include_once "editarUsuario.php";
+    }
+    if($modulo=="editarClientes"){
+      include_once "editarClientes.php";
     }
 
     if($modulo=="agregarProductos"){
@@ -218,55 +240,25 @@
       include_once "recibos/Recibo_Venta.php";
     }
   ?>
-  <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
-<!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
 <script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
 <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
 <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
 <script src="plugins/moment/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
 <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
 <script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
 <script src="dist/js/pages/dashboard.js"></script>
-<!-- DataTables  & Plugins -->
-<!-- <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="../../plugins/jszip/jszip.min.js"></script>
-<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script> -->
 
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>

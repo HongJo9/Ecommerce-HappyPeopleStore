@@ -3,8 +3,8 @@
     include_once "DBecommerce.php";
     // Conectar a la base de datos
     $con = mysqli_connect($host, $user, $pass, $db);
-  if( isset($_REQUEST['guardar']) ){
 
+  if( isset($_REQUEST['guardarusuario']) ){
     // Crear la consulta para buscar al usuario en la base de datos
     $email= mysqli_real_escape_string($con,$_REQUEST['email']??'');
     $pass= md5(mysqli_real_escape_string($con,$_REQUEST['pass']??''));
@@ -36,7 +36,7 @@ $row=mysqli_fetch_assoc($res);
 ?>
 
 <!-- Contenedor de contenido. Contiene contenido de la página -->
-    <div class="content-wrapper">
+  <div class="content-wrapper">
     <!-- Encabezado de contenido (encabezado de página) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -73,7 +73,7 @@ $row=mysqli_fetch_assoc($res);
                     </div>
                     <div class="form-group">
                         <input type="hidden" name="id" value="<?php echo $row['id'] ?>" >
-                        <button type="submit" class="btn btn-primary" name="guardar">Guardar nuevo usuario</button>
+                        <button type="submit" class="btn btn-primary" name="guardarusuario">Guardar nuevo usuario</button>
                     </div>
                 </form>
               </div>

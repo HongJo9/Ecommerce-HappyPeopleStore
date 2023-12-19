@@ -70,8 +70,8 @@
 
     if($resInsert){
       ?>
-      <div class="alert alert-warning float-right position-absolute" role="alert">
-        Venta Confirmada
+      <div class="alert alert-warning float-right" role="alert">
+        Venta Aprobada con exito
       </div>
       <?php
     }else{
@@ -92,7 +92,6 @@
         <div class="row">
           <div class="col-sm-10">
             <h1>Pre-ventas</h1> <br>
-            <p>¡Descubre los pedidos pendientes de confirmación! Revisa los pagos realizados a través de Yape y, una vez verificados, confirma la pre-venta para dar paso a la finalización de la venta. ¡No te pierdas ninguna confirmación!</p>
           </div>
         </div>
       </div><!-- /.contenedor fluido -->

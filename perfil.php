@@ -68,7 +68,8 @@ $direccionCliente = $rowCliente['direccion'];
 
 // Obtener datos de compras pendientes
 $comprasPendientes = array();
-$queryCP = "SELECT id_preventa, fecha_compra, total FROM pre_ventas WHERE id_cliente = '$idCliente'";
+// Obtener datos de compras pendientes ordenados por ID de mayor a menor
+$queryCP = "SELECT id_preventa, fecha_compra, total FROM pre_ventas WHERE id_cliente = '$idCliente' ORDER BY id_preventa DESC";
 $resCP = mysqli_query($con, $queryCP);
 
 while ($rowCP = mysqli_fetch_assoc($resCP)) {
@@ -77,7 +78,8 @@ while ($rowCP = mysqli_fetch_assoc($resCP)) {
 
 // Obtener datos de ventas aprobadas
 $ventasAprobadas = array();
-$queryVentas = "SELECT id_venta, id_cliente, fecha_compra, fecha_confirmacion, total FROM ventas WHERE id_cliente = '$idCliente'";
+// Obtener datos de ventas aprobadas ordenados por ID de mayor a menor
+$queryVentas = "SELECT id_venta, id_cliente, fecha_compra, fecha_confirmacion, total FROM ventas WHERE id_cliente = '$idCliente' ORDER BY id_venta DESC";
 $resVentas = mysqli_query($con, $queryVentas);
 
 while ($rowVenta = mysqli_fetch_assoc($resVentas)) {
@@ -147,12 +149,12 @@ while ($rowVenta = mysqli_fetch_assoc($resVentas)) {
                         echo '<tr>';
                         echo '<td>' . $compra['id_preventa'] . '</td>';
                         echo '<td>' . $compra['fecha_compra'] . '</td>';
-                        echo '<td>' . $compra['total'] . '</td>';
+                        echo '<td>' ."S/. ". $compra['total'] . '</td>';
                         // Agrega un formulario oculto para enviar el id_venta a Recibo_Venta.php
                         echo '<td>
                         <form method="post" action="index.php?modulo=Recibo_Preventa" target="_blank" style="display:inline;">
                             <input type="hidden" name="idPreventa" value="' . $compra['id_preventa'] . '">
-                            <button type="submit" class="text-success" style="font-size: 30px; display: flex; align-items: center;justify-content: center; background: none; border: none; padding: 0; cursor: pointer;">
+                            <button type="submit" class="icono text-success" style="border: none;">
                                 <i class="icono fa fa-info-circle" aria-hidden="true"></i>
                             </button>
                         </form>
@@ -161,7 +163,7 @@ while ($rowVenta = mysqli_fetch_assoc($resVentas)) {
                         echo '<td>';
                         echo '<form method="post" action="" style="display:inline;">';
                         echo '<input type="hidden" name="idBorrar" value="' . $compra['id_preventa'] . '">';
-                        echo '<button type="submit" class="borrar text-danger" name="eliminarPreventa" style="background:none;border:none;padding:0;cursor:pointer;"> <i class="icono fas fa-trash"></i> </button>';
+                        echo '<button type="submit" class="icono borrar text-danger" name="eliminarPreventa" style="background:none;border:none;padding:0;cursor:pointer;"> <i class="icono fas fa-trash"></i> </button>';
                         echo '</form>';
                         echo '</td>';
 
@@ -190,12 +192,12 @@ while ($rowVenta = mysqli_fetch_assoc($resVentas)) {
                         echo '<td>' . $venta['id_venta'] . '</td>';
                         echo '<td>' . $venta['fecha_compra'] . '</td>';
                         echo '<td>' . $venta['fecha_confirmacion'] . '</td>';
-                        echo '<td>' . $venta['total'] . '</td>';
+                        echo '<td>' ."S/. ". $venta['total'] . '</td>';
                         // Agrega un formulario oculto para enviar el id_venta a Recibo_Venta.php
                         echo '<td>
-                                <form method="post" action="index.php?modulo=Recibo_Venta" target="_blank" style="display:inline;">
+                                <form method="post" action="index.php?modulo=Recibo_Venta" target="_blank">
                                     <input type="hidden" name="idVenta" value="' . $venta['id_venta'] . '">
-                                    <button type="submit" class="text-success" style="font-size: 30px; display: flex; align-items: center;justify-content: center; background: none; border: none; padding: 0; cursor: pointer;">
+                                    <button type="submit" class="icono text-success" >
                                         <i class="icono fa fa-info-circle" aria-hidden="true"></i>
                                     </button>
                                 </form>
@@ -214,5 +216,17 @@ while ($rowVenta = mysqli_fetch_assoc($resVentas)) {
         document.getElementById('formPreventa' + idPreventa).submit();
     }
 </script>
+<style>
+    .icono {
+        font-size: 20px; 
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        border: none; 
+        padding: 0; 
+        cursor: pointer;
+        margin: 0 auto; /* Esto centra horizontalmente */
+    }
+  </style>
 </body>
 </html>

@@ -23,7 +23,7 @@
       }
   ?>
   <!-- Contenedor de contenido. Contiene contenido de la página -->
-  <div class="content-wrapper" style="background-image: radial-gradient(circle at 11.95% 36.15%, #ffffff 0, #fffafb 25%, #f2f2f2 50%, #e4eae8 75%, #d8e2df 100%);">
+  <div class="content-wrapper" style="background-image: radial-gradient(circle at 44.73% 110.27%, #ffffff 0, #ffffff 10%, #ffffff 20%, #ffffff 30%, #fffdfd 40%, #fff1f3 50%, #fce5eb 60%, #f7dbe5 70%, #f2d2e1 80%, #eccadf 90%, #e6c3de 100%);">
       <!-- Encabezado de contenido (encabezado de página) -->
       <section class="content-header">
           <div class="container-fluid">
@@ -76,7 +76,7 @@
                                           <td><?php echo $row['stock'] ?></td>
                                           <td><img src="<?php echo $row['imgProducto']; ?>" height="80"></td>
                                           <td > 
-                                            <a href="panel.php?modulo=editarProductos&id=<?php echo $row['id'] ?>" style="margin-right: 5px;"> <i class="icono fas fa-edit"></i> </a> <!-- Editar usuario -->
+                                            <a href="panel.php?modulo=editarProductos&id=<?php echo $row['id'] ?>"> <i class="icono fas fa-edit"></i> </a> <!-- Editar usuario -->
                                         </td>
                                         <td><a href="panel.php?modulo=productos&idBorrar=<?php echo $row['id'] ?>" class="text-danger borrar"> <i class="icono fas fa-trash"></i> </a> <!-- Borrar usuario --></td>
                                       </tr>

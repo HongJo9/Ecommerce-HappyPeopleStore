@@ -60,6 +60,7 @@
                                                 <div class="row">
                                                     <div class="col-4"></div>
                                                     <div class="col-8">
+                                                        <a href="panel.php?modulo=pre_ventas" class="btn btn-warning" style="margin: 0 0 10px;">Regresar a Pre-Ventas</a>
                                                         <!-- Recibo en un cuadro -->
                                                         <div class="recibo" >
                                                             <div class="row" >

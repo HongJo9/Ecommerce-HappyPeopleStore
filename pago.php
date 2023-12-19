@@ -100,10 +100,10 @@ if (isset($_SESSION['idCliente'])) {
                 <button type="submit" class="btn btn-primary float-right" name="guardar" value="guardar">Actualizar Datos</button>
 
                 <!-- Terminos y condiciones -->
-                <div class="mt-5">
+                <div class="mt-5" style="margin-bottom: 80px;">
                     <h2 style="text-decoration: underline;">PASO 2</h2>
                     <h4>Aceptar Terminos y condiciones</h4>
-                    <ul>
+                    <ul >
                         <li>El comprador es responsable de proporcionar información precisa y completa para la transacción.</li>
                         <li>Usted comprende y acepta que es su responsabilidad verificar los detalles del producto, incluyendo el precio y la cantidad, antes de completar la transacción.</li>
                         <li>Una vez que haya realizado el pago a través de Yape o Plin, recibirá una confirmación de pago de nuestra tienda en línea.</li>
@@ -142,7 +142,7 @@ if (isset($_SESSION['idCliente'])) {
                 </div>
                 <!-- codigo de yape -->
                 <div style="text-align: center;" class="mb-4">
-                    <img class="img-fluid" src="../tiendavirtual/happypeoplestore/dist/img/pagoyape.png" alt="">
+                    <img class="img-fluid" src="../tiendavirtual/happypeoplestore/dist/img/Yape-CodigoQR.jpg" alt="">
                 </div>
                 <ul class="ml-5">
                     <li>Confirmar la compra para terminar el pedido</li>

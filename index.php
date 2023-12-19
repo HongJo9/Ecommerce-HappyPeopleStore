@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Happy People Store</title>
+    <link rel="icon" type="image/png" href="happypeoplestore/dist/img/icono.jpg" sizes="16x16">
     <!-- Indica al navegador que sea sensible al ancho de la pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -119,6 +120,7 @@
         </div>
         <?php
             include_once "footer.php";
+            include_once "whatsapp.php";
         ?>
 
 
